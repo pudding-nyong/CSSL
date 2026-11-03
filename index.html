@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSL Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">CSSL TRANSLATOR</div>
+        <p>Coptas Structural Signal Language</p>
+    </header>
+
+    <main class="container">
+
+        <section class="translator-panel">
+            <div class="panel-heading">
+                <h1>SIGNAL INTERPRETER</h1>
+                <span class="status">SYSTEM ONLINE</span>
+            </div>
+
+            <label for="inputText">CSSL INPUT</label>
+
+            <textarea
+                id="inputText"
+                placeholder="CSSL 신호를 입력하세요.&#10;예: ⛒E-3 :: ◉O_H5• > ⤫C-4 > ⟳R?"
+            ></textarea>
+
+            <div class="button-row">
+                <button id="translateButton" class="primary-button">
+                    ANALYZE SIGNAL
+                </button>
+
+                <button id="clearButton" class="secondary-button">
+                    CLEAR
+                </button>
+            </div>
+
+            <div id="errorMessage" class="error-message"></div>
+        </section>
+
+        <section class="stage-panel">
+            <div class="stage-heading">
+                <span class="stage-number">STAGE 01</span>
+                <h2>RAW SIGNAL</h2>
+                <p>입력된 원본 신호</p>
+            </div>
+
+            <div id="rawOutput" class="stage-content raw-content">
+                입력 대기 중...
+            </div>
+        </section>
+
+        <section class="stage-panel">
+            <div class="stage-heading">
+                <span class="stage-number">STAGE 02</span>
+                <h2>CONCEPT INTERPRETATION</h2>
+                <p>기호 및 개념 분석</p>
+            </div>
+
+            <div id="conceptOutput" class="stage-content">
+                분석 대기 중...
+            </div>
+        </section>
+
+        <section class="stage-panel final-stage">
+            <div class="stage-heading">
+                <span class="stage-number">STAGE 03</span>
+                <h2>NATURAL LANGUAGE</h2>
+                <p>자연어 재구성</p>
+            </div>
+
+            <div id="naturalOutput" class="stage-content natural-content">
+                번역 대기 중...
+            </div>
+
+            <button id="copyButton" class="secondary-button">
+                COPY RESULT
+            </button>
+        </section>
+
+        <section class="database-panel">
+            <div class="panel-heading">
+                <h2>CSSL SYMBOL DATABASE</h2>
+            </div>
+
+            <div id="dictionaryList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        CSSL TRANSLATION SYSTEM // PARALLAX
+    </footer>
+
+    <script src="dictionary.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
